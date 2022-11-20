@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-import contact.core.views
+from contact.core.views import home
 
 urlpatterns = [
-    path('', contact.core.views.home),
+    path('', home),
     path('admin/', admin.site.urls),
 ]
