@@ -1,4 +1,8 @@
 from django.shortcuts import render
 
+from contact.core.forms import ContactForm
+
+
 def home(request):
-    return render(request, 'index.html')
+    context = {'form': ContactForm()}
+    return render(request, 'index.html', context)

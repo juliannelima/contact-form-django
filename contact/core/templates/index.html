@@ -8,8 +8,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h1>Fomulário Contato</h1>
-        <form action="">
+        <h1>Página Inicial</h1>
+        <form action="." method="post">
+            {% csrf_token %}
+            <p>
+                <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
+                {{ form.name.error }}
+                {{ form.name }}
+            </p>
+            <p>
+                <label for="{{ form.cpf.id_for_label }}">{{ form.cpf.label }}</label>
+                {{ form.cpf.error }}
+                {{ form.cpf }}
+            </p>
+            <p>
+                <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+                {{ form.email.error }}
+                {{ form.email }}
+            </p>
+            <p>
+                <label for="{{ form.phone.id_for_label }}">{{ form.phone.label }}</label>
+                {{ form.phone.error }}
+                {{ form.phone }}
+            </p>
+
+            <input type="submit" value="Enviar!">
 
         </form>
     </body>
